@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: thin;
+            text-decoration: underline;
+            color: #885df1;
+            text-align: center;
+        }
+
+        .heading-2 {
+            color: #272044;
+            text-align: center;
+            font-weight: 700;
+            padding-top: 20px;
+            font-size: 35px;
+        }
+
+        .coders {
+            color: #0000ff;
+        }
+
+        .top-container {
+            background-color: #f5f0fe;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .courses {
+            color: #ff0000;
+        }
+
+        .stories {
+            color: #008000;
+        }
+
+        .more-info {
+            color: #000000;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .list-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        ul {
+            margin-bottom: 20px;
+            font-size: 20px;
+            display: flex;
+            list-style: none;
+        }
+        ul a{
+            margin-right: 25px;
+            text-decoration: none;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Apply button */
+        .apply-btn {
+            background-color: transparent;
+            border: 1px solid #939297;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 30px;
+            color: #885df1;
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 19px;
+            cursor: pointer;
+        }
+
+        .apply-btn:hover {
+            border: 3px solid #0000ff;
+        }
+        /* contact info */
+        .contact-info{
+            /* display: block;
+            margin: 0 auto; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+        }
+        .platform{
+            color: #885df1;
+        }
+        span{
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-container">
+        <div>
+            <h1>SheCodes
+            </h1>
+            <h2 class="heading-2">Coding Workshop</h2>
+            <button class="apply-btn">Apply now</button>
+            <div class="list-container">
+                <ul>
+                    <a href="https://www.shecodes.io/students" target="_blank" class="coders">
+                        <li>Coders</li>
+                    </a>
+                    <a href="https://www.shecodes.io/workshops" target="_blank" class="courses">
+                        <li>Courses</li>
+                    </a>
+                    <a href="https://www.shecodes.io/stories" target="_blank" class="stories">
+                        <li>Stories</li>
+                    </a>
+                
+                </ul>
+            </div>
+        </div>
+        <hr />
+        <h2 class="more-info">More info</h2>
+        <img src="https://i.pinimg.com/236x/fc/e6/58/fce65820f52d994c047b60e2d714d6bc.jpg" />
+
+        <div class="contact-info">
+            <span class="platform">Email:</span>
+            <span class="contact-detail">hello@shecodes.io</span>
+            <span class="platform">Instagram: </span>
+            <span class="contact-detail">@shecodes.io</span>
+        </div>
+    </div>
+
+</body>
+
+</html>
