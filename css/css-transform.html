@@ -8,6 +8,8 @@
     <style>
         body {
             background: rgba(124, 88, 88, 0.8);
+            margin: 20px 30px;
+            padding: 0 40px;
         }
 
         h1 {
@@ -21,38 +23,94 @@
             text-decoration: wavy;
         }
 
-        .place1 {
-            height: 300px;
-            width: auto;
-            transition: all 400ms ease-in;
+        .images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 10px;
+        }
+
+        .image-container {
             position: relative;
+            overflow: hidden;
+            border-radius: 10px;
         }
 
-        .place1:hover {
-            transform: scale(1.3);
+        img {
+            width: 100%;
+            height: auto;
+            transition: transform 400ms ease-in-out;
         }
 
-        .place2 {
-            height: 500px;
-            margin-top: 30px;
+        .caption {
             position: absolute;
-            width: auto;
-            transition: all 400ms ease-in;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px 15px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 8px;
+            opacity: 0;
+            transition: opacity 300ms ease-in-out;
         }
 
-        .place2:hover {
-            transform: rotate(1080deg);
-            border: 2px solid purple;
+        .place1 img:hover {
+            transform: scale(1.2) rotate(-10deg);
+        }
+
+        .place1:hover .caption {
+            opacity: 1;
+        }
+
+        .place2 img:hover {
+            transform: rotate(15deg);
+        }
+
+        .place2:hover .caption {
+            opacity: 1;
+        }
+
+        .place3 img:hover {
+            transform: translateY(-20px);
+        }
+
+        .place3:hover .caption {
+            opacity: 1;
+        }
+
+        .place4 img:hover {
+            transform: scale(0.8) skew(10deg, 10deg);
+        }
+
+        .place4:hover .caption {
+            opacity: 1;
         }
     </style>
 </head>
 
 <body>
     <h1>PLACES I'D LIKE TO VISIT</h1>
-    <img src="https://i.pinimg.com/736x/94/b4/20/94b420d6ca60cf5ea8cd5f312752759b.jpg" class="place1">
-    <img src="https://i.pinimg.com/736x/94/b4/20/94b420d6ca60cf5ea8cd5f312752759b.jpg" class="place2">
-    <img src="https://i.pinimg.com/736x/94/b4/20/94b420d6ca60cf5ea8cd5f312752759b.jpg" class="place3">
-    <img src="https://i.pinimg.com/736x/94/b4/20/94b420d6ca60cf5ea8cd5f312752759b.jpg" class="place4">
+    <div class="images">
+        <div class="image-container place1">
+            <img src="https://i.pinimg.com/736x/94/b4/20/94b420d6ca60cf5ea8cd5f312752759b.jpg" alt="Chicago">
+            <div class="caption">Chicago</div>
+        </div>
+        <div class="image-container place2">
+            <img src="https://i.pinimg.com/736x/bd/94/e5/bd94e5bde8c80b999a8091b0919b4baa.jpg" alt="Japan">
+            <div class="caption">Japan</div>
+        </div>
+        <div class="image-container place3">
+            <img src="https://i.pinimg.com/736x/83/18/d7/8318d722dbd166e7357d8964264826b8.jpg" alt="Bahamas">
+            <div class="caption">Bahamas</div>
+        </div>
+        <div class="image-container place4">
+            <img src="https://i.pinimg.com/736x/a2/82/18/a28218d31aab2ac77437b03aa35f2651.jpg" alt="Paris">
+            <div class="caption">Paris</div>
+        </div>
+    </div>
 </body>
 
 </html>
