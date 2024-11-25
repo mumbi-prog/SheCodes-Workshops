@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Theme</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+            font-family: Arial, sans-serif;
+        }
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 30px;
+        }
+        .sub {
+            margin: 20px 20px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+        .sub p {
+            line-height: 1.6;
+            text-align: justify;
+            width: 50%;
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+        img {
+            border-radius: 10px;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            border: 2px solid #a5132b;
+            padding: 10px 20px;
+            box-shadow: 4px 4px 8px rgba(165, 19, 43, 0.5);
+            background-color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #a5132b;
+            color: white;
+        }
+        .black{
+            background: black;
+        }
+        .antiquewhite{
+            background: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <h1>HTML Class Manipulation</h1>
+        <div class="sub">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, soluta beatae. Aspernatur obcaecati quas
+                hic voluptates ullam eveniet modi blanditiis quam, aliquam necessitatibus laborum, omnis itaque nam
+                recusandae laudantium sint. <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, soluta beatae. Aspernatur obcaecati quas
+                hic voluptates ullam eveniet modi blanditiis quam, aliquam necessitatibus laborum, omnis itaque nam
+                recusandae laudantium sint. <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, soluta beatae. Aspernatur obcaecati quas
+                hic voluptates ullam eveniet modi blanditiis quam, aliquam necessitatibus laborum, omnis itaque nam
+                recusandae laudantium sint. <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, soluta beatae. Aspernatur obcaecati quas
+                hic voluptates ullam eveniet modi blanditiis quam, aliquam necessitatibus laborum, omnis itaque nam
+                recusandae laudantium sint.</p>
+            <div class="image-gallery">
+                <img src="https://i.pinimg.com/736x/be/f9/46/bef946a3e5a34fac778a75e8ee2e6275.jpg"
+                    alt="Gallery Image 1">
+                <img src="https://i.pinimg.com/736x/be/f9/46/bef946a3e5a34fac778a75e8ee2e6275.jpg"
+                    alt="Gallery Image 2">
+                <img src="https://i.pinimg.com/736x/be/f9/46/bef946a3e5a34fac778a75e8ee2e6275.jpg"
+                    alt="Gallery Image 3">
+                <img src="https://i.pinimg.com/736x/be/f9/46/bef946a3e5a34fac778a75e8ee2e6275.jpg"
+                    alt="Gallery Image 4">
+                <img src="https://i.pinimg.com/736x/be/f9/46/bef946a3e5a34fac778a75e8ee2e6275.jpg"
+                    alt="Gallery Image 5">
+                <img src="https://i.pinimg.com/736x/be/f9/46/bef946a3e5a34fac778a75e8ee2e6275.jpg"
+                    alt="Gallery Image 6">
+            </div>
+        </div>
+        <button>Dark Theme</button>
+
+        <script>
+            function changeTheme (){
+                let bkg = document.querySelector("body");
+                let h1 = document.querySelector("h1");
+                let p = document.querySelector("p");
+
+                bkg.classList.add("black");
+                h1.style.color = "antiquewhite";
+                p.style.color = "antiquewhite";
+            }
+            
+            let btn = document.querySelector("button");
+            btn.addEventListener("click", changeTheme);
+        </script>
+    </div>
+</body>
+
+</html>
