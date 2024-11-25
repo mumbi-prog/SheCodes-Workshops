@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add-on Project Overview</title>
+    <style>
+        body{
+            background: rgb(207,92,168);
+            background: linear-gradient(90deg, rgba(207,92,168,0.9864320728291317) 6%, rgba(111,81,156,1) 51%, rgba(72,145,226,1) 99%);
+        }
+        .content-container{
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+        }
+        .big-image{
+            display: block;
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            transition: all 500ms ease-in;
+        }
+        .big-image:hover{
+            transform: translateY(-10px);
+        }
+        button{
+            display: block;
+            margin: 0 auto;
+            box-shadow: 3px 3px 3px rgba(20, 3, 97, 0.3);
+        }
+        h1, h3{
+            text-align: center;
+            margin-top: -5px;
+        }
+        .image-gallery{
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: 102px 102px 102px 102px;
+            grid-gap: 28px;
+        }
+        .grid-img{
+            width: 102px;
+            height: 102px;
+            border-radius: 10px;
+            transition: all 200ms ease-in;
+        }
+        .grid-img:hover{
+            transform: scale(1.2) rotate(-10deg);
+        }
+
+        .new-gradient{
+            background: rgb(56,2,38);
+            background: linear-gradient(90deg, rgba(56,2,38,0.9864320728291317) 6%, rgba(32,3,74,1) 51%, rgba(4,38,75,1) 99%);
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <button> Change Theme </button>
+        <h1>⛸️ Grace on Ice: The Art of Skating</h1>
+        <h3>Where Precision Meets Elegance</h3>
+        <img src="https://i.pinimg.com/236x/7a/05/8e/7a058e82938b7eacbe5a8db5955cf396.jpg" alt="" class="big-image">
+        <div class="image-gallery">
+            <img src="https://i.pinimg.com/736x/c1/98/b4/c198b4ad940f0a2c11d5d13fa2832619.jpg" alt="" class="grid-img">
+            <img src="https://i.pinimg.com/736x/c1/98/b4/c198b4ad940f0a2c11d5d13fa2832619.jpg" alt="" class="grid-img">
+            <img src="https://i.pinimg.com/736x/c1/98/b4/c198b4ad940f0a2c11d5d13fa2832619.jpg" alt="" class="grid-img">
+            <img src="https://i.pinimg.com/736x/c1/98/b4/c198b4ad940f0a2c11d5d13fa2832619.jpg" alt="" class="grid-img">
+
+        </div>
+        <p style="text-align: justify; font-style: italic;">
+            Ice skating is more than a sport—it's a mesmerizing dance of balance, artistry, and athleticism. Gliding effortlessly
+            across the glassy surface, skaters weave stories with every spin and jump, blending precision with creativity. Whether
+            on a frozen lake or in a bustling rink, the sensation of slicing through ice evokes a sense of freedom, while the
+            challenge of mastering techniques fosters resilience. It's a pursuit that transcends age, offering a graceful escape and
+            a testament to the beauty of human movement.
+        </p>
+        <span>📖<a href="https://en.wikipedia.org/wiki/Ice_skating" target="_blank" style="font-weight: bold;">Read on Wikipedia</a></span>
+    </div>
+
+    <script>
+        function changeTheme (){
+            let body = document.querySelector("body");
+            let bkg = document.querySelector(".content-container");
+            let h1 = document.querySelector("h1");
+            let h3 = document.querySelector("h3");
+            let p = document.querySelector("p");
+            let a = document.querySelector("a");
+
+            body.classList.add("new-gradient");
+            bkg.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+            h1.style.color = "white";
+            h3.style.color = "white";
+            p.style.color = "white";
+            a.style.color = "pink";
+        }
+
+        let btn = document.querySelector("button");
+        btn.addEventListener("click", changeTheme);
+    </script>
+</body>
+</html>
